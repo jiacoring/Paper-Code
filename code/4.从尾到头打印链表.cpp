@@ -1,20 +1,12 @@
 #include <iostream>
 #include <list>
-#include <stack>
 
 using namespace std;
 
 void print_reverse_list(list<int> link_list) {
-    if (!link_list.empty()) {
-        stack<int> stack;
-        for (auto it = link_list.begin(); it != link_list.end(); ++it) {
-            stack.push(*it);
-        }
-        while (!stack.empty()) {
-            cout << stack.top() << endl;
-            stack.pop();
-        }
-    }
+    if (!link_list.empty()) 
+        for (auto it = link_list.crbegin(); it != link_list.crend(); ++it) 
+            cout<<*it<<endl;   
 }
 
 int main() {
